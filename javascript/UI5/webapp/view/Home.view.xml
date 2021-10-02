@@ -1,0 +1,52 @@
+<mvc:View
+    controllerName="sap.scholar.demo.controller.Home"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+	<Page title="{i18n>homePageTitle}">
+		<content>
+            <Table id="colorsTable" items="{path: 'data>/colors', sorter:{path: 'type'}}">
+                <headerToolbar>
+					<OverflowToolbar>
+						<Title text="Colors" level="H2"/>
+						<ToolbarSpacer/>
+                        <SearchField width="34%" search=".onFilterColors"/>
+						<Button	icon="sap-icon://sort" press="handleSortButtonPressed"/>
+						<Button icon="sap-icon://group-2" press="handleGroupButtonPressed"/>
+					</OverflowToolbar>
+				</headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Color"/>
+                    </Column>
+                    <Column>
+                        <Text text="Category"/>
+                    </Column>
+                    <Column>
+                        <Text text="Type"/>
+                    </Column>
+                    <Column>
+                        <Text text="RGBA code"/>
+                    </Column>
+                    <Column>
+                        <Text text="HEX code"/>
+                    </Column>
+                    <Column>
+                        <Text text="Frequency (THz)"/>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation" press=".onNavigation">
+                        <cells>
+                            <ObjectIdentifier text="{data>color}"/>
+                            <Text text="{data>category}"/>
+                            <Text text="{data>type}"/>
+                            <Text text="{data>rgba}"/>
+                            <Text text="{data>hex}"/>
+                            <ObjectStatus text="{path: 'data>frequency', formatter: '.formatter.getFormattedFrequency'}" state="{ path: 'data>frequency', formatter: '.formatter.formatfrequencyState' }"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleSortDialogConfirm">
+		<sortItems>
+			<ViewSettingsItem text="Color" key="color" selected="true"/>
+			<ViewSettingsItem text="Category" key="category"/>
+			<ViewSettingsItem text="Type" key="type"/>
+			<ViewSettingsItem text="HEX code" key="hex"/>
+            <ViewSettingsItem text="RGBA code" key="rgba"/>
+		</sortItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>
