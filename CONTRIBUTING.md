@@ -47,9 +47,3 @@ git push -u origin <your_branch_name>
 **14.** Click on `Create Pull Request`.
 
 
-## Project Maintainers  ❤️ 
-
-
-|                                     <a href="https://github.com/AnkitKumar383"><img src="https://media-exp1.licdn.com/dms/image/C5103AQHjY_FEeNVbdA/profile-displayphoto-shrink_800_800/0/1577284417198?e=1638403200&v=beta&t=Q3L6juOEHl9B3TF3sT0h3UqxtwGHsZx7Pihq1D22VXQ" width=150px height=150px /></a>                                      |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                      **[Ankit Kumar](https://www.linkedin.com/in/ankit-kumar-2b7b77118/)** 
