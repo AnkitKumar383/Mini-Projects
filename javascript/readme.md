@@ -1,0 +1,1 @@
+For JavaScript projects (This folder will also contain projects developed using javscript libraries or frameworks)
