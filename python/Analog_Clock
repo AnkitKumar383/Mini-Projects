@@ -1,0 +1,90 @@
+import turtle
+import time
+import datetime
+
+t=turtle.Turtle()
+x=0
+y=0
+
+t.home()
+t.speed(0)
+y=-180 #to shift away from origin to be centre of circle
+t.penup()
+t.goto(x,y)
+t.pendown()
+
+
+t.circle(180)
+t.penup()
+t.home()
+
+y=-150 #to shift towards origin of circle
+t.goto(x,y)
+t.pendown()
+t.circle(150)
+
+t.penup() #to remove the line
+t.home()
+
+t.left(90)
+
+for i in range(12):     #its range starts from 0-11, therefore i+1(1-12)
+    t.right(360/12)     #marking to 30 degree from y axis
+    t.forward(135)      #goto radius 150
+    t.write((i+1))
+    t.goto(0,0)
+
+def hour_arm():
+    t.penup()
+    t.home()
+    t.right(180)
+    t.pendown()
+    t.pensize(5)
+    t.forward(90)
+
+def minute_arm():
+    t.penup()
+    t.home()
+    t.right(270)
+    t.pendown()
+    t.pensize(2)
+    t.forward(130)
+    
+hour_arm()
+minute_arm()
+t.pensize(1)
+angle=0
+while True:        #for seconds_arm
+    begin = time.time()
+    start = 1
+    if start==1:
+        t.penup()
+        t.home()
+        t.left(90)
+        start=2
+    t.right(angle)
+    t.pendown()
+    t.forward(125)
+    time.sleep(1-(time.time()-begin))
+    t.undo()    #removes last operation, here the previous seconds arm strokes
+    t.penup()
+    t.goto(0,0)
+    angle +=360/60
+
+
+    
+def tick():
+    t = datetime.today()
+    secondTimer = t.second + t.microsecond*0.000001
+    minute = t.minute + secondTimer/60.0
+    onTheHour = t.hour + minute/60.0
+    try:
+        tracer(False)  
+        second_hand.setheading(6*secondTimer)  
+        minute_hand.setheading(6*minute)
+        hour_hand.setheading(30*onTheHour)
+        tracer(True)
+        ontimer(tick, 100)
+    except Terminator:
+        pass    
+turtle.done()
