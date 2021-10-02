@@ -1,0 +1,29 @@
+<mvc:View
+    controllerName="sap.scholar.demo.controller.Detail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form">
+	<Page title="{i18n>detailPageTitle}" showNavButton="true" navButtonPress=".onNavBack">
+		<content>
+            <Panel>
+                <ObjectHeader title="{/color}"/>
+            </Panel>
+            <VBox class="sapUiSmallMargin">
+                <f:SimpleForm layout="ResponsiveGridLayout" >
+                    <f:content>
+                        <Label text="{i18n>category}" />
+                        <Text text="{/category}"/>
+                        <Label text="Type" />
+                        <Text text="{/type}"/>
+                        <Label text="RGBA code" />
+                        <Text text="{/rgba}"/>
+                        <Label text="HEX code" />
+                        <Text text="{/hex}"/>
+                        <Label text="Frequency (THz)" />
+                        <ObjectStatus text="{path: '/frequency', formatter: '.formatter.getFormattedFrequency'}" state="{ path: '/frequency', formatter: '.formatter.formatfrequencyState' }"/>
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+		</content>
+	</Page>
+</mvc:View>
