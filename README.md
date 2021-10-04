@@ -19,7 +19,3 @@ For example : <br/>
 |                                     <a href="https://github.com/abhianuj"><img src="https://avatars.githubusercontent.com/u/32203719?v=4" width=150px height=150px /></a>                                      |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                      **[Abhijeet Kumar]()** 
-
-
-##  Contributors
-[![](https://opencollective.com/html-react-parser/contributors.svg?width=890&button=false)](https://github.com/AnkitKumar383/Mini-Projects/graphs/contributors)
